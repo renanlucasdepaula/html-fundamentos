@@ -1,0 +1,96 @@
+<div wm-slider>
+    <p class="fade">
+        <img src="http://files.cod3r.com.br/curso-web/imagem1.jpg"
+         alt="Muro da Cidade"
+         width="513" height="342"
+         title="Muro da Cidade por Tarso Bessa"
+         >
+    </p>
+    <p class="fade">
+        <img src="http://files.cod3r.com.br/curso-web/imagem2.gif"
+        alt="Intro Cod3r" height="342">
+    </p>
+    <p class="circular fade">
+            <img src="http://files.cod3r.com.br/curso-web/imagem3.png"
+            alt="Rio De Janeiro" height="342">
+    </p>
+    
+    <p class="texto fade">
+            <img src="http://files.cod3r.com.br/curso-web/avatar.jpg"
+            alt="Avatar" height="50" align="left" >
+            DKOSAKDASOKDASODASODKASODKSAOKDOASKDOASKDOSAKODSKAODKSAODKOKDKDK
+    </p>
+    
+    <p class="cidade fade"></p>
+    
+    <p class="fade">
+        <picture>
+            <source srcset="http://files.cod3r.com.br/curso-web/logo-larga.png"
+                media="(min-width: 600px)">
+            <img src="http://files.cod3r.com.br/curso-web/logo-estreita.png" alt="Logo">
+        </picture>
+    </p>
+
+</div>
+
+
+
+<style>
+    .wm-slider{
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+    }
+    p {
+        position: absolute;
+        display: none;
+        
+    }
+    .fade{
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+    @-webkit-keyframes fade {
+        from { opacity: .4}
+        to { opacity: 1}
+    }
+    @keyframes fade {
+        from { opacity: .4 }
+        to { opacity: 1 }
+    }
+
+    .circular {
+        width: 513px;
+        background-color: #4444;
+    }
+    .texto {
+        width: 400px;
+    }
+    .texto img {
+        margin-right: 10px;
+    }
+
+    .cidade {
+        width: 513px;
+        height: 342;
+        background-image: url('http://files.cod3r.com.br/curso-web/imagem4.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 200%;
+    }
+</style>
+<script>
+    var slideIndex = 0;
+    showSlides()
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("fade");
+        var dots = document.getElementsByTagName("p");
+        for (i = 0;i < slides.length;i++) {
+            slides[i].style.display = "none";
+        }
+    }
+</script>
